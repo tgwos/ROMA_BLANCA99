@@ -21,7 +21,7 @@ CATALOG_URL = "https://tgwos.github.io/ROMABLANCA99/"
 
 TELEGRAM_CHANNEL_URL = "https://t.me/+ub8d0gSv7Sg3MTJk"
 INSTAGRAM_URL = "https://www.instagram.com/romablanca.93"
-WHATSAPP_URL = "https://wa.me/393XXXXXXXXX"
+WHATSAPP_URL = "https://wa.me/3508797679"
 # 🔹 Tastiera principale
 def main_keyboard():
     return InlineKeyboardMarkup([
