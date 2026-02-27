@@ -19,55 +19,30 @@ TOKEN = os.getenv("BOT_TOKEN")
 LOGO_URL = "https://tgwos.github.io/ROMABLANCA99/video1.MP4"
 CATALOG_URL = "https://tgwos.github.io/ROMABLANCA99/"
 
-TELEGRAM_CHANNEL_URL = "https://t.me/+ub8d0gSv7Sg3MTJk"  # <-- metti il link corretto
-INSTAGRAM_URL = "https://www.instagram.com/romablanca.93?igsh=MXAycXh5MmNub3Jueg%3D%3D&utm_source=qr"  # <-- metti il link corretto
+TELEGRAM_CHANNEL_URL = "https://t.me/+ub8d0gSv7Sg3MTJk"
+INSTAGRAM_URL = "https://www.instagram.com/romablanca.93"
 
 # 🔹 Tastiera principale
 def main_keyboard():
     return InlineKeyboardMarkup([
-        [
-            InlineKeyboardButton(
-                "📦 Apri Catalogo",
-                web_app=WebAppInfo(url=CATALOG_URL)
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                "👥 Canale Telegram",
-                url=TELEGRAM_CHANNEL_URL
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                "📞 Contatti ufficiali",
-                callback_data="contacts"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                "📸 Instagram",
-                url=INSTAGRAM_URL
-            )
-        ]
+        [InlineKeyboardButton("📦 Apri Catalogo", web_app=WebAppInfo(url=CATALOG_URL))],
+        [InlineKeyboardButton("👥 Canale Telegram", url=TELEGRAM_CHANNEL_URL)],
+        [InlineKeyboardButton("📞 Contatti ufficiali", callback_data="contacts")],
+        [InlineKeyboardButton("📸 Instagram", url=INSTAGRAM_URL)]
     ])
 
 # 🔹 Tastiera indietro
 def back_keyboard():
     return InlineKeyboardMarkup([
-        [
-            InlineKeyboardButton(
-                "⬅️ Indietro",
-                callback_data="back"
-            )
-        ]
+        [InlineKeyboardButton("⬅️ Indietro", callback_data="back")]
     ])
 
 # 🔹 /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_video(
-        photo=LOGO_URL,
+        video=LOGO_URL,
         caption=(
-            "🥇*BENVENUTO SU GAS CLOUD*🥇\n\n"
+            "🥇 *BENVENUTO SU ROMA BLANCA93* 🥇\n\n"
             "Il tuo punto di riferimento ufficiale.\n"
             "Accedi al catalogo tramite il pulsante qui sotto.\n\n"
             "📸 Seguimi su Instagram per aggiornamenti continui."
@@ -99,13 +74,13 @@ async def buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
     elif query.data == "back":
         await query.edit_message_caption(
             caption=(
-            "🥇*BENVENUTO SU ROMA BLANCA93*🥇\n\n"
-            "Il tuo punto di riferimento ufficiale.\n"
-            "Accedi al catalogo tramite il pulsante qui sotto.\n\n"
-            "📸 Seguimi su Instagram per aggiornamenti continui."
-        ),
-        parse_mode="Markdown",
-        reply_markup=main_keyboard()
+                "🥇 *BENVENUTO SU ROMA BLANCA93* 🥇\n\n"
+                "Il tuo punto di riferimento ufficiale.\n"
+                "Accedi al catalogo tramite il pulsante qui sotto.\n\n"
+                "📸 Seguimi su Instagram per aggiornamenti continui."
+            ),
+            parse_mode="Markdown",
+            reply_markup=main_keyboard()
         )
 
 # 🔹 Avvio bot
@@ -116,5 +91,5 @@ def main():
     app.run_polling()
 
 # ✅ QUESTO FA PARTIRE IL BOT
-if __name__ == "__main__":
+if __name__== "__main__":
     main()
