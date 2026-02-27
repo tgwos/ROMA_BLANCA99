@@ -64,7 +64,7 @@ def back_keyboard():
 
 # 🔹 /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_photo(
+    await update.message.reply_video(
         photo=LOGO_URL,
         caption=(
             "🥇*BENVENUTO SU GAS CLOUD*🥇\n\n"
