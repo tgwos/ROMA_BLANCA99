@@ -63,7 +63,7 @@ async def buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
             caption=(
                 "📱 *CONTATTI UFFICIALI*\n\n"
                 "✈️ *TELEGRAM 1*\n"
-                "@ragacaroquintero93\n\n"
+                "@rafacaroquintero93\n\n"
                 "✈️ *TELEGRAM 2*\n"
                 "@arellanofelix93\n\n"
                 "📶 *SIGNAL*\n"
