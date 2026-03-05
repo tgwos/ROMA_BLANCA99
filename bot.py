@@ -21,15 +21,15 @@ CATALOG_URL = "https://tgwos.github.io/ROMABLANCA99/"
 
 TELEGRAM_CHANNEL_URL = "https://t.me/+E1yYweMiuCRlYWM8"
 INSTAGRAM_URL = "https://www.instagram.com/romablanca_93?igsh=Z2VkMW81OWduYTli&utm_source=qr"
-WHATSAPP_URL = "https://wa.me/3508797679"
+WHATSAPP_URL = "https://wa.me/3508127777"
 # 🔹 Tastiera principale
 def main_keyboard():
     return InlineKeyboardMarkup([
         [InlineKeyboardButton("📦 Apri Catalogo", web_app=WebAppInfo(url=CATALOG_URL))],
         [InlineKeyboardButton("👥 Canale Telegram", url=TELEGRAM_CHANNEL_URL)],
         [InlineKeyboardButton("📞 Contatti ufficiali", callback_data="contacts")],
-        [InlineKeyboardButton("📸 Instagram", url=INSTAGRAM_URL)]
-        
+        [InlineKeyboardButton("📸 Instagram", url=INSTAGRAM_URL)],
+        [InlineKeyboardButton("💬 WhatsApp", url=WHATSAPP_URL)]
 
     ])
 
